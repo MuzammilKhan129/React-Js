@@ -7,6 +7,15 @@ const messages = [
 ];
 
 export default function App() {
+  return (
+    <div>
+      <Steps />
+      <Steps />
+    </div>
+  );
+}
+
+function Steps() {
   const [step, setStep] = useState(1);
   const [isOpen, setisOpen] = useState(true);
 
@@ -18,16 +27,16 @@ export default function App() {
   }
 
   return (
-    <>
+    <div>
       <button className="close" onClick={() => setisOpen((is) => !is)}>
         &times;
       </button>
       {isOpen && (
         <div className="steps">
           <div className="numbers">
-            <div className={`step >= 1 ? "active" : ""`}>1</div>
-            <div className={`step >= 2 ? "active" : ""`}>2</div>
-            <div className={`step >= 3 ? "active" : ""`}>3</div>
+            <div className={step >= 1 ? "active" : ""}>1</div>
+            <div className={step >= 2 ? "active" : ""}>2</div>
+            <div className={step >= 3 ? "active" : ""}>3</div>
           </div>
 
           <p className="message">
@@ -50,6 +59,6 @@ export default function App() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }

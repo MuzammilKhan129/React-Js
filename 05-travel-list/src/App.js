@@ -27,6 +27,11 @@ function Form() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    if (!description) return;
+
+    const newItems = { description, quantity, packed: false, id: Date.now() };
+    console.log(newItems);
+
     setDescription("");
     setQuantity(1);
   }
@@ -55,7 +60,7 @@ function Form() {
     </form>
   );
 }
-
+ 
 function PacingList() {
   return (
     <div className="list">

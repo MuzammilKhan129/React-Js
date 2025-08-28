@@ -27,7 +27,6 @@ function Form() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(e);
     setDescription("");
     setQuantity(1);
   }

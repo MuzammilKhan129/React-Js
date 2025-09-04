@@ -18,9 +18,7 @@ export default function App() {
   }
   function handleToggleItem(id) {
     setItems((prevItems) =>
-      prevItems.map((it) =>
-        it.id === id ? { ...prevItems, packed: !it.packed } : it
-      )
+      prevItems.map((it) => (it.id === id ? { ...it, packed: !it.packed } : it))
     );
   }
 

@@ -182,7 +182,7 @@ function FormSplitBill({ selectedFriend }) {
         onChange={(e) =>
           setPaidByUser(Number(e.target.value)) > bill
             ? paidByUser
-            : Number(e.target.value)
+            : Number(e.target.value) 
         }
       ></input>
 

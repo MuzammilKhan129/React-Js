@@ -20,15 +20,18 @@ html {
 body {
   height: 100vh;
   color: #495057;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block; /* Removed flex centering */
+  margin: 0;
+  background: #fafafa;
 }
 
 .App {
+  max-width: 90rem; /* Centered layout with max width */
+  margin: 4rem auto;
   min-height: 66vh;
+
   display: grid;
-  grid-template-columns: 34rem 44rem;
+  grid-template-columns: 34rem 1fr; /* Sidebar fixed, right column flexible */
   column-gap: 4rem;
   align-items: start;
 }
@@ -65,7 +68,7 @@ body {
 
   padding: 1.2rem;
   border-radius: 7px;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .selected,
@@ -95,8 +98,8 @@ body {
 }
 
 .sidebar > .button {
-  float: right;
-  margin-right: 1.2rem;
+  display: block;
+  margin: 1.2rem auto; /* Centered under the list */
 }
 
 .green {
@@ -122,6 +125,7 @@ form {
   margin-bottom: 1.6rem;
   padding: 1.2rem;
 }
+
 .form-split-bill {
   grid-template-columns: 1fr 12rem;
   padding: 3.2rem 4rem;
@@ -160,7 +164,9 @@ form .button {
   grid-column: 2;
 }
 
-form h2 {
+/* Unified heading styles */
+form h2,
+form h3 {
   grid-column: 1 / -1;
   font-size: 2.2rem;
   text-transform: uppercase;

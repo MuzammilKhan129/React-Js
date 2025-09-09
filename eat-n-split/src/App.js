@@ -27,6 +27,7 @@ export default function App() {
         <FormAddFriend />
         <Button>Add Friend</Button>
       </div>
+      <FormSplitBill />
     </div>
   );
 }
@@ -73,10 +74,10 @@ function Button({ children }) {
 function FormAddFriend() {
   return (
     <form className="form-add-friend">
-      <label>🧑‍🤝‍🧑 Friend name</label>
+      <label>🧑‍🤝‍🧑Friend name</label>
       <input type="text"></input>
 
-      <label>🌉 Image URL</label>
+      <label>🌉Image URL</label>
       <input type="text"></input>
 
       <Button>Add</Button>
@@ -84,16 +85,21 @@ function FormAddFriend() {
   );
 }
 
+function FormSplitBill() {
+  return (
+    <form className="form-split-bill">
+      <h3>Split a bill with X</h3>
 
+      <label>💰Bill value</label>
+      <input type="text"></input>
 
+      <label>🕴️Your expense</label>
+      <input type="text"></input>
 
+      <label>🧑‍🤝‍🧑X's expense</label>
+      <input type="text"></input>
 
-
-
-
-
-
-
-
-
-
+      <Button>Split Bill</Button>
+    </form>
+  );
+}

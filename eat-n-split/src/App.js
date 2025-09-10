@@ -59,7 +59,13 @@ function Friend({ friend }) {
       )}
       {friend.balance === 0 && <p>You and {friend.name} are even.</p>}
 
-      <button className="button">Select</button>
+      <Button>Select</Button>
     </li>
   );
 }
+
+function Button({ children }) {
+  return <button className="button">{children}</button>;
+}
+
+

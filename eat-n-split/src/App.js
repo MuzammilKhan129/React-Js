@@ -18,3 +18,17 @@ const initialFriends = [
     balance: 0,
   },
 ];
+
+export default function App() {
+  return (
+    <div className="App">
+      <div className="sidebar">
+        <FriendsList />
+      </div>
+    </div>
+  );
+}
+
+function FriendsList() {
+  return <ul>List</ul>;
+}

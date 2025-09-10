@@ -25,7 +25,7 @@ body {
   justify-content: center;
 }
 
-.app {
+.App {
   min-height: 66vh;
   display: grid;
   grid-template-columns: 34rem 44rem;

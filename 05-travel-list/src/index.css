@@ -24,7 +24,6 @@ body {
   grid-template-rows: auto auto 1fr auto;
 }
 
-/* ===== HEADER ===== */
 h1 {
   text-align: center;
   background-color: #f4a226;
@@ -37,7 +36,6 @@ h1 {
   padding: 2.4rem 0;
 }
 
-/* ===== ADD FORM ===== */
 .add-form {
   background-color: #e5771f;
   padding: 2.8rem 0;
@@ -71,7 +69,6 @@ input {
   background-color: #76c7ad;
 }
 
-/* ===== LIST ===== */
 .list {
   background-color: #5a3e2b;
   color: #ffebb3;
@@ -95,7 +92,7 @@ input {
   margin-top: auto;
 }
 
-/* Scrollable but scrollbar hidden */
+
 .list ul {
   list-style: none;
   width: 80%;
@@ -138,7 +135,6 @@ input[type="checkbox"] {
   transform: translateY(2px);
 }
 
-/* ===== STATS ===== */
 .stats {
   background-color: #76c7ad;
   text-align: center;

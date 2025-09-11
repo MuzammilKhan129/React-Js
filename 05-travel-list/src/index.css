@@ -91,13 +91,16 @@ input {
   font-weight: 700;
   margin: 0 0.8rem;
 }
+.actions {
+  margin-top: auto;
+}
 
 /* Scrollable but scrollbar hidden */
 .list ul {
   list-style: none;
   width: 80%;
   max-height: 50vh;
-  overflow-y: auto; 
+  overflow-y: auto;
   overflow-x: hidden;
 
   display: grid;
@@ -106,12 +109,12 @@ input {
   justify-content: center;
   align-content: start;
 
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .list ul::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 
 .list li {

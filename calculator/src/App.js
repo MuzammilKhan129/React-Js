@@ -11,11 +11,18 @@ export default function App() {
 
 function Tipcalculator() {
   const [bill, setBill] = useState(0);
+  const [percentage1, setPercantage1] = useState();
+  const [percentage2, setPercantage2] = useState();
+
   return (
     <div>
       <Billinput bill={bill} onsetBill={setBill} />
-      <ServiceRating>How did you like the service?</ServiceRating>
-      <ServiceRating>How did your friend like the service?</ServiceRating>
+      <ServiceRating percent={percentage1} onSelect={setPercantage1}>
+        How did you like the service?
+      </ServiceRating>
+      <ServiceRating percent={percentage2} onSelect={setPercantage2}>
+        How did your friend like the service?
+      </ServiceRating>
       <Output bill={bill} />
       <Reset />
     </div>
@@ -36,11 +43,14 @@ function Billinput({ bill, onsetBill }) {
   );
 }
 
-function ServiceRating({ children }) {
+function ServiceRating({ children, percent, onSelect }) {
   return (
     <div>
       <label>{children}</label>
-      <select>
+      <select
+        value={percent}
+        onChange={(e) => onSelect(Number(e.target.value))}
+      >
         <option value="0">Dissatisfied (0%)</option>
         <option value="5">It was okay (5%)</option>
         <option value="10">It was good (10%)</option>

@@ -14,6 +14,8 @@ function Tipcalculator() {
   const [percentage1, setPercantage1] = useState();
   const [percentage2, setPercantage2] = useState();
 
+  const tip = bill * ((percentage1 + percentage2) / 2 / 100);
+
   return (
     <div>
       <Billinput bill={bill} onsetBill={setBill} />
@@ -23,7 +25,7 @@ function Tipcalculator() {
       <ServiceRating percent={percentage2} onSelect={setPercantage2}>
         How did your friend like the service?
       </ServiceRating>
-      <Output bill={bill} />
+      <Output bill={bill} tip={tip} />
       <Reset />
     </div>
   );
@@ -60,8 +62,12 @@ function ServiceRating({ children, percent, onSelect }) {
   );
 }
 
-function Output({ bill }) {
-  return <h3>You pay X (${bill} + $B)</h3>;
+function Output({ bill, tip }) {
+  return (
+    <h3>
+      You pay {bill + tip} (${bill} + ${tip})
+    </h3>
+  );
 }
 
 function Reset() {

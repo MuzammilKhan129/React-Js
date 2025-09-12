@@ -23,7 +23,7 @@ function Tipcalculator() {
   }
 
   return (
-    <div>
+    <div className="calculator">
       <Billinput bill={bill} onsetBill={setBill} />
       <ServiceRating percent={percentage1} onSelect={setPercantage1}>
         How did you like the service?
@@ -31,8 +31,13 @@ function Tipcalculator() {
       <ServiceRating percent={percentage2} onSelect={setPercantage2}>
         How did your friend like the service?
       </ServiceRating>
-      <Output bill={bill} tip={tip} />
-      <Reset handleReset={handleReset} />
+
+      {bill > 0 && (
+        <>
+          <Output bill={bill} tip={tip} />
+          <Reset handleReset={handleReset} />{" "}
+        </>
+      )}
     </div>
   );
 }

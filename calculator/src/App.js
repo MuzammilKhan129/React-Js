@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 
 export default function App() {
   return (
@@ -9,22 +10,28 @@ export default function App() {
 }
 
 function Tipcalculator() {
+  const [bill, setBill] = useState(0);
   return (
     <div>
-      <Billinput />
+      <Billinput bill={bill} onsetBill={setBill} />
       <ServiceRating>How did you like the service?</ServiceRating>
       <ServiceRating>How did your friend like the service?</ServiceRating>
-      <Output />
+      <Output bill={bill} />
       <Reset />
     </div>
   );
 }
 
-function Billinput() {
+function Billinput({ bill, onsetBill }) {
   return (
     <div>
       <label>How much was the bill?</label>
-      <input type="text" placeholder="Bill Value"></input>
+      <input
+        type="text"
+        placeholder="Bill-Value"
+        value={bill}
+        onChange={(e) => onsetBill(Number(e.target.value))}
+      ></input>
     </div>
   );
 }
@@ -43,8 +50,8 @@ function ServiceRating({ children }) {
   );
 }
 
-function Output() {
-  return <h3>You pay X ($A + $B)</h3>;
+function Output({ bill }) {
+  return <h3>You pay X (${bill} + $B)</h3>;
 }
 
 function Reset() {

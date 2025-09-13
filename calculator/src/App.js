@@ -3,8 +3,19 @@ import "./App.css";
 export default function App() {
   return (
     <div>
+      <Tipcalculator />
+    </div>
+  );
+}
+
+function Tipcalculator() {
+  return (
+    <div>
       <Billinput />
       <ServiceRating />
+      <ServiceRating />
+      <Output />
+      <Reset />
     </div>
   );
 }
@@ -18,8 +29,8 @@ function Billinput() {
   );
 }
 
-function ServiceRating(){
-  return(
+function ServiceRating() {
+  return (
     <div>
       How did you like the service?
       <select>
@@ -29,11 +40,9 @@ function ServiceRating(){
         <option>Absolutely amazing (20%)</option>
       </select>
     </div>
-  )
+  );
 }
 
+function Output() {}
 
-
-
-
-
+function Reset() {}

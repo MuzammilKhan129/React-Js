@@ -47,7 +47,7 @@ function AcoordionItem({ num, title, text, currOpen, onOpen }) {
 
   function handleToggle() {
     // setIsOpen((isOpen) => !isOpen);
-    
+    onOpen(num);
   }
 
   return (

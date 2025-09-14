@@ -48,7 +48,8 @@ function AcoordionItem({ num, title, currOpen, onOpen, children }) {
 
   function handleToggle() {
     // setIsOpen((isOpen) => !isOpen);
-    onOpen(num);
+    onOpen(isOpen ? null : num);
+    // onOpen(null);
   }
 
   return (

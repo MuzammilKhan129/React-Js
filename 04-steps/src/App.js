@@ -15,9 +15,7 @@ export default function App() {
   );
 }
 
-function StepMessage(){
-  
-}
+
 
 function Steps() {
   const [step, setStep] = useState(1);
@@ -60,6 +58,11 @@ function Steps() {
     </div>
   );
 }
+
+function StepMessage(){
+  
+}
+
 function Button({ bgColor, textColor, onClick, children }) {
   return (
     <button

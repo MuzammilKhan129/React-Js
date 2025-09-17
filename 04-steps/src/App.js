@@ -39,6 +39,8 @@ function Steps() {
             <div className={step >= 3 ? "active" : ""}>3</div>
           </div>
 
+          <StepMessage step={step} />
+
           <div className="buttons">
             <Button bgColor="#7950F2" textColor="#fff" onClick={handlePrevious}>
               <span>👈</span> Previous
@@ -53,7 +55,7 @@ function Steps() {
   );
 }
 
-function StepMessage() {
+function StepMessage({ step }) {
   <p className="message">
     <h3>Step {step}</h3> : {messages[step - 1]}
   </p>;

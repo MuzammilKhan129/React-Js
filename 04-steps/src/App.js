@@ -15,8 +15,6 @@ export default function App() {
   );
 }
 
-
-
 function Steps() {
   const [step, setStep] = useState(1);
   const [isOpen, setisOpen] = useState(true);
@@ -41,10 +39,6 @@ function Steps() {
             <div className={step >= 3 ? "active" : ""}>3</div>
           </div>
 
-          <p className="message">
-            <h3>Step {step}</h3> : {messages[step - 1]}
-          </p>
-
           <div className="buttons">
             <Button bgColor="#7950F2" textColor="#fff" onClick={handlePrevious}>
               <span>👈</span> Previous
@@ -59,8 +53,10 @@ function Steps() {
   );
 }
 
-function StepMessage(){
-  
+function StepMessage() {
+  <p className="message">
+    <h3>Step {step}</h3> : {messages[step - 1]}
+  </p>;
 }
 
 function Button({ bgColor, textColor, onClick, children }) {

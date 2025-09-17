@@ -15,6 +15,10 @@ export default function App() {
   );
 }
 
+function StepMessage(){
+  
+}
+
 function Steps() {
   const [step, setStep] = useState(1);
   const [isOpen, setisOpen] = useState(true);
@@ -50,7 +54,7 @@ function Steps() {
             <Button bgColor="#7950F2" textColor="#fff" onClick={handleNext}>
               Next <span>👉</span>
             </Button>
-          </div> 
+          </div>
         </div>
       )}
     </div>

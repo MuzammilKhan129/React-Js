@@ -50,7 +50,7 @@ function Steps() {
             <Button bgColor="#7950F2" textColor="#fff" onClick={handleNext}>
               Next <span>👉</span>
             </Button>
-          </div>
+          </div> 
         </div>
       )}
     </div>

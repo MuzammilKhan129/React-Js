@@ -343,3 +343,104 @@ body {
   padding: 0.4rem;
   margin-top: 2.4rem;
 }
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .main {
+    flex-wrap: wrap;
+    height: auto; /* let content grow */
+  }
+
+  .box {
+    flex: 1 1 45%;
+    max-width: 100%;
+  }
+
+  .search {
+    width: 28rem; /* smaller search bar */
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 1.6rem;
+  }
+
+  .nav-bar {
+    grid-template-columns: 1fr; /* stack items */
+    height: auto;
+    gap: 1.2rem;
+    padding: 1.6rem;
+    text-align: center;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .search {
+    width: 100%;
+    font-size: 1.6rem;
+  }
+
+  .num-results {
+    justify-self: center;
+    font-size: 1.6rem;
+  }
+
+  .main {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .box {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .details section {
+    padding: 2rem;
+  }
+
+  .details img {
+    width: 100%; /* full width images */
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  html {
+    font-size: 55%; /* slightly smaller base font */
+  }
+
+  .logo span {
+    font-size: 2.4rem;
+  }
+
+  .logo h1 {
+    font-size: 1.8rem;
+  }
+
+  .search {
+    padding: 0.8rem 1.2rem;
+    font-size: 1.4rem;
+  }
+
+  .list li {
+    grid-template-columns: 3rem 1fr;
+    padding: 1.2rem 1.6rem;
+  }
+
+  .summary,
+  .rating {
+    padding: 1.6rem;
+  }
+
+  .btn-add {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+}

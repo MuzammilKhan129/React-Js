@@ -74,6 +74,15 @@ function NavBar({ children }) {
   return <nav className="nav-bar">{children}</nav>;
 }
 
+function Logo() {
+  return (
+    <div className="logo">
+      <span role="img">🍿</span>
+      <h1>usePopcorn</h1>
+    </div>
+  );
+}
+
 function Search() {
   const [query, setQuery] = useState("");
 
@@ -85,14 +94,6 @@ function Search() {
       value={query}
       onChange={(e) => setQuery(e.target.value)}
     />
-  );
-}
-function Logo() {
-  return (
-    <div className="logo">
-      <span role="img">🍿</span>
-      <h1>usePopcorn</h1>
-    </div>
   );
 }
 
@@ -117,7 +118,7 @@ function ListBox({ children }) {
         className="btn-toggle"
         onClick={() => setIsOpen1((open) => !open)}
       >
-        {isOpen1 ? "–" : "+"}
+        {isOpen1 ? "-" : "+"}
       </button>
       {isOpen1 && children}
     </div>
@@ -159,7 +160,7 @@ function WatchedBox() {
         className="btn-toggle"
         onClick={() => setIsOpen2((open) => !open)}
       >
-        {isOpen2 ? "–" : "+"}
+        {isOpen2 ? "-" : "+"}
       </button>
       {isOpen2 && (
         <>

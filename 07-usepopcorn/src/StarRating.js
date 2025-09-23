@@ -6,6 +6,7 @@ export default function StarRating() {
           <span>S{i + 1}</span>
         ))}
       </div>
+      <p>10</p>
     </div>
   );
 }

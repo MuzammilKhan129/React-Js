@@ -34,6 +34,11 @@ export default function App() {
     </div>
   );
 }
+const containerStyle = {
+  fontFamily: "sans-serif",
+  lineHeight: 1.5,
+  color: "#333",
+};
 
 function TextExpander({
   collapsedNumWords = 10,
@@ -58,7 +63,7 @@ function TextExpander({
     color: buttonColor,
   };
   return (
-    <div className={className}>
+    <div style={containerStyle} className={className}>
       <span> {displayText}</span>
       <button onClick={() => setIsExpanded((exp) => !exp)} style={buttonStyle}>
         {isExpanded ? collapseButtonText : expandButtonText}

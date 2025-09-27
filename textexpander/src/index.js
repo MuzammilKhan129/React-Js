@@ -8,6 +8,6 @@ const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <App />
+    <App className="box" expanded={true} />
   </StrictMode>
 );

@@ -42,7 +42,7 @@ function Tabbed({ content }) {
         <TabContent item={content.at(activeTab)} />
       ) : (
         <DifferentContent />
-      )}
+      )}  
     </div>
   );
 }

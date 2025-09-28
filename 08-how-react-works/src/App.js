@@ -18,7 +18,8 @@ const content = [
   },
 ];
 
-console.log(<DifferentContent />);
+console.log(<DifferentContent test={23} />);
+
 export default function App() {
   return (
     <div>

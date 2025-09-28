@@ -18,6 +18,7 @@ const content = [
   },
 ];
 
+console.log(<DifferentContent />);
 export default function App() {
   return (
     <div>
@@ -42,7 +43,7 @@ function Tabbed({ content }) {
         <TabContent item={content.at(activeTab)} />
       ) : (
         <DifferentContent />
-      )}  
+      )}
     </div>
   );
 }

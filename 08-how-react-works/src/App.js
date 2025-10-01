@@ -43,7 +43,7 @@ function Tabbed({ content }) {
       {activeTab <= 2 ? (
         <TabContent item={content.at(activeTab)} />
       ) : (
-        <DifferentContent />
+        <DifferentContent /> 
       )}
     </div>
   );
@@ -87,7 +87,7 @@ function TabContent({ item }) {
 
       <div className="tab-undo">
         <button>Undo</button>
-        <button>Undo in 2s</button>
+        <button>Undo in 2s</button> 
       </div>
     </div>
   );
